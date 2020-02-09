@@ -17,7 +17,7 @@ while True:
     output = x.split()
     
     if len(output) > 1:
-        data = {"brightness":float(output[0]), "angle":int(output[1]), "time":datetime.now(timezone.utc)}
+        data = {"brightness":float(output[0]), "angle":float(output[1]), "time":datetime.now(timezone.utc)}
         print(data)
         panelData.insert_one(data)
     
